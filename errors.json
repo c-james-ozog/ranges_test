@@ -1,94 +1,94 @@
 [
   {
     "symbol": "CCK26",
-    "error": "Could not find historical CSV link for CCK26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "KCK26",
-    "error": "Could not find historical CSV link for KCK26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "HGK26",
-    "error": "Could not find historical CSV link for HGK26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "ZCN26",
-    "error": "Could not find historical CSV link for ZCN26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "ZCZ26",
-    "error": "Could not find historical CSV link for ZCZ26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "CTK26",
-    "error": "Could not find historical CSV link for CTK26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "CLM26",
-    "error": "Could not find historical CSV link for CLM26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "GFK26",
-    "error": "Could not find historical CSV link for GFK26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "GCJ26",
-    "error": "Could not find historical CSV link for GCJ26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "KEN26",
-    "error": "Could not find historical CSV link for KEN26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "HEM26",
-    "error": "Could not find historical CSV link for HEM26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "LEJ26",
-    "error": "Could not find historical CSV link for LEJ26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "NQM26",
-    "error": "Could not find historical CSV link for NQM26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "NGM26",
-    "error": "Could not find historical CSV link for NGM26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "ZRN26",
-    "error": "Could not find historical CSV link for ZRN26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "ESM26",
-    "error": "Could not find historical CSV link for ESM26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "SIM26",
-    "error": "Could not find historical CSV link for SIM26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "ZMN26",
-    "error": "Could not find historical CSV link for ZMN26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "ZLN26",
-    "error": "Could not find historical CSV link for ZLN26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "ZSN26",
-    "error": "Could not find historical CSV link for ZSN26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "ZSX26",
-    "error": "Could not find historical CSV link for ZSX26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "DXM26",
-    "error": "Could not find historical CSV link for DXM26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   },
   {
     "symbol": "ZWN26",
-    "error": "Could not find historical CSV link for ZWN26"
+    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
   }
 ]
