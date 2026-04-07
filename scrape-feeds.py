@@ -97,22 +97,6 @@ def accept_cookies(page) -> None:
             pass
 
 
-def parse_day_high_low(text: str, symbol: str) -> Tuple[float, float]:
-    patterns = [
-        r"Day High\s+([0-9.,\-s]+)\s+Day Low\s+([0-9.,\-s]+)",
-        r"Day High / Low\s+([0-9.,\-s]+)\s*/\s*([0-9.,\-s]+)",
-        r"High\s+([0-9.,\-s]+)\s+Low\s+([0-9.,\-s]+)",
-    ]
-    for pattern in patterns:
-        m = re.search(pattern, text, re.IGNORECASE)
-        if m:
-            return (
-                barchart_price_to_decimal(symbol, m.group(1)),
-                barchart_price_to_decimal(symbol, m.group(2)),
-            )
-    raise RuntimeError(f"Could not parse day high/low for {symbol}")
-
-
 def fetch_historical_csv(page, symbol: str) -> List[Dict[str, str]]:
     url = f"https://www.barchart.com/futures/quotes/{symbol}/historical-download"
     page.goto(url, wait_until="domcontentloaded", timeout=60000)
@@ -172,6 +156,8 @@ def parse_historical(rows: List[Dict[str, str]], contract: Dict[str, str]) -> Di
     if len(cleaned) < 4:
         raise RuntimeError(f"Not enough historical rows for {symbol}")
 
+    latest_day = cleaned[0]
+
     previous_daily_ranges = [
         format_tick(round_to_tick(r["high"] - r["low"], tick), tick)
         for r in cleaned[1:4]
@@ -191,9 +177,13 @@ def parse_historical(rows: List[Dict[str, str]], contract: Dict[str, str]) -> Di
             continue
         block_high = max(r["high"] for r in block)
         block_low = min(r["low"] for r in block)
-        previous_weekly_ranges.append(format_tick(round_to_tick(block_high - block_low, tick), tick))
+        previous_weekly_ranges.append(
+            format_tick(round_to_tick(block_high - block_low, tick), tick)
+        )
 
     return {
+        "dailyHigh": format_tick(round_to_tick(latest_day["high"], tick), tick),
+        "dailyLow": format_tick(round_to_tick(latest_day["low"], tick), tick),
         "weeklyHigh": weekly_high,
         "weeklyLow": weekly_low,
         "previousDailyRanges": previous_daily_ranges,
@@ -203,15 +193,6 @@ def parse_historical(rows: List[Dict[str, str]], contract: Dict[str, str]) -> Di
 
 def scrape_contract(page, contract: Dict[str, str]):
     symbol = contract["symbol"]
-    tick = TICK_SIZES[contract["commodity"]]
-
-    overview_url = f"https://www.barchart.com/futures/quotes/{symbol}/overview"
-    page.goto(overview_url, wait_until="domcontentloaded", timeout=60000)
-    page.wait_for_timeout(2500)
-    accept_cookies(page)
-
-    overview_text = page.locator("body").inner_text()
-    daily_high, daily_low = parse_day_high_low(overview_text, symbol)
 
     historical_rows = fetch_historical_csv(page, symbol)
     historical = parse_historical(historical_rows, contract)
@@ -219,8 +200,8 @@ def scrape_contract(page, contract: Dict[str, str]):
     return (
         {
             "symbol": symbol,
-            "dailyHigh": format_tick(round_to_tick(daily_high, tick), tick),
-            "dailyLow": format_tick(round_to_tick(daily_low, tick), tick),
+            "dailyHigh": historical["dailyHigh"],
+            "dailyLow": historical["dailyLow"],
         },
         {
             "symbol": symbol,
