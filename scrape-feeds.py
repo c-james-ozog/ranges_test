@@ -97,40 +97,54 @@ def accept_cookies(page) -> None:
             pass
 
 
-def fetch_historical_csv(page, symbol: str) -> List[Dict[str, str]]:
-    url = f"https://www.barchart.com/futures/quotes/{symbol}/historical-download"
+def fetch_historical_rows(page, symbol: str) -> List[Dict[str, str]]:
+    url = f"https://www.barchart.com/futures/quotes/{symbol}/price-history/historical"
     page.goto(url, wait_until="domcontentloaded", timeout=60000)
-    page.wait_for_timeout(3000)
+    page.wait_for_timeout(4000)
     accept_cookies(page)
 
-    href = None
-    for selector in [
-        "a[href*='historical.csv']",
-        "a[href*='download']",
-        "a:has-text('Download')",
-    ]:
-        try:
-            href = page.locator(selector).first.get_attribute("href", timeout=1500)
-            if href:
-                break
-        except Exception:
-            pass
+    # Wait for any table to appear
+    page.wait_for_selector("table", timeout=15000)
 
-    if not href:
-        raise RuntimeError(f"Could not find historical CSV link for {symbol}")
+    rows = []
+    all_rows = page.locator("table tbody tr")
 
-    if href.startswith("/"):
-        href = "https://www.barchart.com" + href
+    count = all_rows.count()
+    if count == 0:
+        raise RuntimeError(f"No price history rows found for {symbol}")
 
-    response = page.context.request.get(href, headers={"Referer": url})
-    if not response.ok:
-        raise RuntimeError(f"Historical CSV request failed for {symbol}: {response.status}")
+    for i in range(count):
+        text = all_rows.nth(i).inner_text().strip()
+        if not text:
+            continue
 
-    text = response.text()
-    reader = csv.DictReader(io.StringIO(text))
-    rows = [row for row in reader if row]
+        # Split on runs of whitespace
+        parts = re.split(r"\s{2,}|\t", text)
+        if len(parts) < 4:
+            parts = text.split()
+
+        # We only need date/high/low
+        # Common row format on Barchart price history pages is roughly:
+        # Date | Open | High | Low | Last | Change | Volume | Open Interest
+        if len(parts) < 4:
+            continue
+
+        date_val = parts[0]
+        high_val = parts[2] if len(parts) > 2 else ""
+        low_val = parts[3] if len(parts) > 3 else ""
+
+        if not high_val or not low_val:
+            continue
+
+        rows.append({
+            "date": date_val,
+            "high": high_val,
+            "low": low_val,
+        })
+
     if not rows:
-        raise RuntimeError(f"Historical CSV empty for {symbol}")
+        raise RuntimeError(f"Could not parse price history table for {symbol}")
+
     return rows
 
 
@@ -140,13 +154,13 @@ def parse_historical(rows: List[Dict[str, str]], contract: Dict[str, str]) -> Di
 
     cleaned = []
     for row in rows:
-        high_raw = row.get("High") or row.get("high") or ""
-        low_raw = row.get("Low") or row.get("low") or ""
+        high_raw = row.get("high") or ""
+        low_raw = row.get("low") or ""
         if not high_raw or not low_raw:
             continue
         try:
             cleaned.append({
-                "date": row.get("Trading Day") or row.get("Date") or "",
+                "date": row.get("date") or "",
                 "high": barchart_price_to_decimal(symbol, str(high_raw)),
                 "low": barchart_price_to_decimal(symbol, str(low_raw)),
             })
@@ -194,7 +208,7 @@ def parse_historical(rows: List[Dict[str, str]], contract: Dict[str, str]) -> Di
 def scrape_contract(page, contract: Dict[str, str]):
     symbol = contract["symbol"]
 
-    historical_rows = fetch_historical_csv(page, symbol)
+    historical_rows = fetch_historical_rows(page, symbol)
     historical = parse_historical(historical_rows, contract)
 
     return (
