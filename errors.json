@@ -1,94 +1,94 @@
 [
   {
     "symbol": "CCK26",
-    "error": "Could not parse day high/low for CCK26"
+    "error": "Could not find historical CSV link for CCK26"
   },
   {
     "symbol": "KCK26",
-    "error": "Could not parse day high/low for KCK26"
+    "error": "Could not find historical CSV link for KCK26"
   },
   {
     "symbol": "HGK26",
-    "error": "Could not parse day high/low for HGK26"
+    "error": "Could not find historical CSV link for HGK26"
   },
   {
     "symbol": "ZCN26",
-    "error": "Could not parse day high/low for ZCN26"
+    "error": "Could not find historical CSV link for ZCN26"
   },
   {
     "symbol": "ZCZ26",
-    "error": "Could not parse day high/low for ZCZ26"
+    "error": "Could not find historical CSV link for ZCZ26"
   },
   {
     "symbol": "CTK26",
-    "error": "Could not parse day high/low for CTK26"
+    "error": "Could not find historical CSV link for CTK26"
   },
   {
     "symbol": "CLM26",
-    "error": "Could not parse day high/low for CLM26"
+    "error": "Could not find historical CSV link for CLM26"
   },
   {
     "symbol": "GFK26",
-    "error": "Could not parse day high/low for GFK26"
+    "error": "Could not find historical CSV link for GFK26"
   },
   {
     "symbol": "GCJ26",
-    "error": "Could not parse day high/low for GCJ26"
+    "error": "Could not find historical CSV link for GCJ26"
   },
   {
     "symbol": "KEN26",
-    "error": "Could not parse day high/low for KEN26"
+    "error": "Could not find historical CSV link for KEN26"
   },
   {
     "symbol": "HEM26",
-    "error": "Could not parse day high/low for HEM26"
+    "error": "Could not find historical CSV link for HEM26"
   },
   {
     "symbol": "LEJ26",
-    "error": "Could not parse day high/low for LEJ26"
+    "error": "Could not find historical CSV link for LEJ26"
   },
   {
     "symbol": "NQM26",
-    "error": "Could not parse day high/low for NQM26"
+    "error": "Could not find historical CSV link for NQM26"
   },
   {
     "symbol": "NGM26",
-    "error": "Could not parse day high/low for NGM26"
+    "error": "Could not find historical CSV link for NGM26"
   },
   {
     "symbol": "ZRN26",
-    "error": "Could not parse day high/low for ZRN26"
+    "error": "Could not find historical CSV link for ZRN26"
   },
   {
     "symbol": "ESM26",
-    "error": "Could not parse day high/low for ESM26"
+    "error": "Could not find historical CSV link for ESM26"
   },
   {
     "symbol": "SIM26",
-    "error": "Could not parse day high/low for SIM26"
+    "error": "Could not find historical CSV link for SIM26"
   },
   {
     "symbol": "ZMN26",
-    "error": "Could not parse day high/low for ZMN26"
+    "error": "Could not find historical CSV link for ZMN26"
   },
   {
     "symbol": "ZLN26",
-    "error": "Could not parse day high/low for ZLN26"
+    "error": "Could not find historical CSV link for ZLN26"
   },
   {
     "symbol": "ZSN26",
-    "error": "Could not parse day high/low for ZSN26"
+    "error": "Could not find historical CSV link for ZSN26"
   },
   {
     "symbol": "ZSX26",
-    "error": "Could not parse day high/low for ZSX26"
+    "error": "Could not find historical CSV link for ZSX26"
   },
   {
     "symbol": "DXM26",
-    "error": "Could not parse day high/low for DXM26"
+    "error": "Could not find historical CSV link for DXM26"
   },
   {
     "symbol": "ZWN26",
-    "error": "Could not parse day high/low for ZWN26"
+    "error": "Could not find historical CSV link for ZWN26"
   }
 ]
