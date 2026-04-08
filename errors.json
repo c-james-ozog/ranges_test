@@ -1,94 +1,10 @@
 [
   {
-    "symbol": "CCK26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
+    "symbol": "CCK26.CBT",
+    "error": "HTTP Error 404: Not Found"
   },
   {
-    "symbol": "KCK26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "HGK26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "ZCN26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "ZCZ26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "CTK26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "CLM26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "GFK26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "GCJ26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "KEN26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "HEM26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "LEJ26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "NQM26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "NGM26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "ZRN26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "ESM26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "SIM26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "ZMN26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "ZLN26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "ZSN26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "ZSX26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "DXM26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
-  },
-  {
-    "symbol": "ZWN26",
-    "error": "Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"table\") to be visible\n"
+    "symbol": "KCK26.CBT",
+    "error": "HTTP Error 404: Not Found"
   }
 ]
