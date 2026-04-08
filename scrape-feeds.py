@@ -4,8 +4,8 @@ import time
 from urllib.request import urlopen, Request
 
 CONTRACTS = [
-    {"commodity": "Cocoa", "symbol": "CCK26.CBT"},
-    {"commodity": "Coffee", "symbol": "KCK26.CBT"},
+    {"commodity": "Cocoa", "symbol": "CCK26.NYB"},
+    {"commodity": "Coffee", "symbol": "KCK26.NYB"},
     {"commodity": "Copper", "symbol": "HGK26.CMX"},
     {"commodity": "Corn", "symbol": "ZCN26.CBT"},
     {"commodity": "Corn", "symbol": "ZCZ26.CBT"},
