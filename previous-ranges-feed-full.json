@@ -1,5 +1,31 @@
 [
   {
+    "symbol": "CCK26",
+    "previousDailyRanges": [
+      "225",
+      "82",
+      "161"
+    ],
+    "previousWeeklyRanges": [
+      "251",
+      "218",
+      "303"
+    ]
+  },
+  {
+    "symbol": "KCK26",
+    "previousDailyRanges": [
+      "12.85",
+      "4.85",
+      "9.25"
+    ],
+    "previousWeeklyRanges": [
+      "27.15",
+      "30.75",
+      "19.95"
+    ]
+  },
+  {
     "symbol": "HGK26",
     "previousDailyRanges": [
       "0.1025",

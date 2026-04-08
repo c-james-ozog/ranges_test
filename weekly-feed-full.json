@@ -1,5 +1,15 @@
 [
   {
+    "symbol": "CCK26",
+    "weeklyHigh": "3378",
+    "weeklyLow": "2992"
+  },
+  {
+    "symbol": "KCK26",
+    "weeklyHigh": "301.5",
+    "weeklyLow": "284.3"
+  },
+  {
     "symbol": "HGK26",
     "weeklyHigh": "5.7775",
     "weeklyLow": "5.513"
