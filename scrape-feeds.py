@@ -1,37 +1,32 @@
 #!/usr/bin/env python3
-import csv
-import io
 import json
-import re
 import time
-from typing import Dict, List, Tuple
-
-from playwright.sync_api import sync_playwright
+from urllib.request import urlopen, Request
 
 CONTRACTS = [
-    {"commodity": "Cocoa", "symbol": "CCK26", "month": "May"},
-    {"commodity": "Coffee", "symbol": "KCK26", "month": "May"},
-    {"commodity": "Copper", "symbol": "HGK26", "month": "May"},
-    {"commodity": "Corn", "symbol": "ZCN26", "month": "Jul"},
-    {"commodity": "Corn", "symbol": "ZCZ26", "month": "Dec"},
-    {"commodity": "Cotton", "symbol": "CTK26", "month": "May"},
-    {"commodity": "Crude Oil WTI", "symbol": "CLM26", "month": "Jun"},
-    {"commodity": "Feeder Cattle", "symbol": "GFK26", "month": "May"},
-    {"commodity": "Gold", "symbol": "GCJ26", "month": "Apr"},
-    {"commodity": "Hard Red Wheat", "symbol": "KEN26", "month": "Jul"},
-    {"commodity": "Lean Hogs", "symbol": "HEM26", "month": "Jun"},
-    {"commodity": "Live Cattle", "symbol": "LEJ26", "month": "Apr"},
-    {"commodity": "Nasdaq 100 E-Mini", "symbol": "NQM26", "month": "Jun"},
-    {"commodity": "Natural Gas", "symbol": "NGM26", "month": "Jun"},
-    {"commodity": "Rice", "symbol": "ZRN26", "month": "Jul"},
-    {"commodity": "S&P 500 E-Mini", "symbol": "ESM26", "month": "Jun"},
-    {"commodity": "Silver", "symbol": "SIM26", "month": "Jun"},
-    {"commodity": "Soybean Meal", "symbol": "ZMN26", "month": "Jul"},
-    {"commodity": "Soybean Oil", "symbol": "ZLN26", "month": "Jul"},
-    {"commodity": "Soybeans", "symbol": "ZSN26", "month": "Jul"},
-    {"commodity": "Soybeans", "symbol": "ZSX26", "month": "Nov"},
-    {"commodity": "US Dollar", "symbol": "DXM26", "month": "Jun"},
-    {"commodity": "Wheat", "symbol": "ZWN26", "month": "Jul"},
+    {"commodity": "Cocoa", "symbol": "CCK26.CBT"},
+    {"commodity": "Coffee", "symbol": "KCK26.CBT"},
+    {"commodity": "Copper", "symbol": "HGK26.CMX"},
+    {"commodity": "Corn", "symbol": "ZCN26.CBT"},
+    {"commodity": "Corn", "symbol": "ZCZ26.CBT"},
+    {"commodity": "Cotton", "symbol": "CTK26.NYB"},
+    {"commodity": "Crude Oil WTI", "symbol": "CLM26.NYM"},
+    {"commodity": "Feeder Cattle", "symbol": "GFK26.CME"},
+    {"commodity": "Gold", "symbol": "GCJ26.CMX"},
+    {"commodity": "Hard Red Wheat", "symbol": "KEN26.CBT"},
+    {"commodity": "Lean Hogs", "symbol": "HEM26.CME"},
+    {"commodity": "Live Cattle", "symbol": "LEJ26.CME"},
+    {"commodity": "Nasdaq 100 E-Mini", "symbol": "NQM26.CME"},
+    {"commodity": "Natural Gas", "symbol": "NGM26.NYM"},
+    {"commodity": "Rice", "symbol": "ZRN26.CBT"},
+    {"commodity": "S&P 500 E-Mini", "symbol": "ESM26.CME"},
+    {"commodity": "Silver", "symbol": "SIM26.CMX"},
+    {"commodity": "Soybean Meal", "symbol": "ZMN26.CBT"},
+    {"commodity": "Soybean Oil", "symbol": "ZLN26.CBT"},
+    {"commodity": "Soybeans", "symbol": "ZSN26.CBT"},
+    {"commodity": "Soybeans", "symbol": "ZSX26.CBT"},
+    {"commodity": "US Dollar", "symbol": "DXM26.NYB"},
+    {"commodity": "Wheat", "symbol": "ZWN26.CBT"},
 ]
 
 TICK_SIZES = {
@@ -58,126 +53,60 @@ TICK_SIZES = {
     "Wheat": 0.25,
 }
 
-GRAIN_PREFIXES = ("ZC", "ZS", "ZW", "KE", "ZR")
-
-
 def round_to_tick(value: float, tick: float) -> float:
     return round(round(value / tick) * tick, 10)
-
 
 def format_tick(value: float, tick: float) -> str:
     decimals = len(str(tick).split(".")[1]) if "." in str(tick) else 0
     out = f"{round(value, decimals):.{decimals}f}" if decimals else str(int(round(value)))
     return out.rstrip("0").rstrip(".") if "." in out else out
 
+def fetch_yahoo_history(symbol: str):
+    url = (
+        f"https://query1.finance.yahoo.com/v8/finance/chart/{symbol}"
+        "?range=3mo&interval=1d&includePrePost=false&events=div%2Csplits"
+    )
+    req = Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urlopen(req, timeout=30) as resp:
+        data = json.load(resp)
 
-def barchart_price_to_decimal(symbol: str, raw: str) -> float:
-    s = raw.strip().lower().replace("s", "").replace(",", "")
-    if re.fullmatch(r"\d+-\d+", s):
-        left, right = s.split("-")
-        whole = int(left)
-        frac = int(right)
-        if symbol.startswith(GRAIN_PREFIXES):
-            return whole / 100 + frac * 0.0025
-        return whole + frac / 8.0
-    return float(s)
+    result = data["chart"]["result"][0]
+    quote = result["indicators"]["quote"][0]
 
-
-def accept_cookies(page) -> None:
-    for selector in [
-        "button:has-text('Accept')",
-        "button:has-text('I Accept')",
-        "button:has-text('Agree')",
-    ]:
-        try:
-            page.locator(selector).first.click(timeout=1200)
-            page.wait_for_timeout(500)
-            return
-        except Exception:
-            pass
-
-
-def fetch_historical_rows(page, symbol: str) -> List[Dict[str, str]]:
-    url = f"https://www.barchart.com/futures/quotes/{symbol}/price-history/historical"
-    page.goto(url, wait_until="domcontentloaded", timeout=60000)
-    page.wait_for_timeout(4000)
-    accept_cookies(page)
-
-    # Wait for any table to appear
-    page.wait_for_selector("table", timeout=15000)
+    highs = quote.get("high", [])
+    lows = quote.get("low", [])
+    timestamps = result.get("timestamp", [])
 
     rows = []
-    all_rows = page.locator("table tbody tr")
-
-    count = all_rows.count()
-    if count == 0:
-        raise RuntimeError(f"No price history rows found for {symbol}")
-
-    for i in range(count):
-        text = all_rows.nth(i).inner_text().strip()
-        if not text:
+    for ts, high, low in zip(timestamps, highs, lows):
+        if high is None or low is None:
             continue
-
-        # Split on runs of whitespace
-        parts = re.split(r"\s{2,}|\t", text)
-        if len(parts) < 4:
-            parts = text.split()
-
-        # We only need date/high/low
-        # Common row format on Barchart price history pages is roughly:
-        # Date | Open | High | Low | Last | Change | Volume | Open Interest
-        if len(parts) < 4:
-            continue
-
-        date_val = parts[0]
-        high_val = parts[2] if len(parts) > 2 else ""
-        low_val = parts[3] if len(parts) > 3 else ""
-
-        if not high_val or not low_val:
-            continue
-
         rows.append({
-            "date": date_val,
-            "high": high_val,
-            "low": low_val,
+            "timestamp": ts,
+            "high": float(high),
+            "low": float(low),
         })
 
     if not rows:
-        raise RuntimeError(f"Could not parse price history table for {symbol}")
+        raise RuntimeError(f"No historical rows for {symbol}")
 
+    rows.sort(key=lambda x: x["timestamp"], reverse=True)
     return rows
 
+def parse_rows(rows, commodity: str):
+    tick = TICK_SIZES[commodity]
 
-def parse_historical(rows: List[Dict[str, str]], contract: Dict[str, str]) -> Dict[str, object]:
-    symbol = contract["symbol"]
-    tick = TICK_SIZES[contract["commodity"]]
+    if len(rows) < 4:
+        raise RuntimeError("Not enough rows")
 
-    cleaned = []
-    for row in rows:
-        high_raw = row.get("high") or ""
-        low_raw = row.get("low") or ""
-        if not high_raw or not low_raw:
-            continue
-        try:
-            cleaned.append({
-                "date": row.get("date") or "",
-                "high": barchart_price_to_decimal(symbol, str(high_raw)),
-                "low": barchart_price_to_decimal(symbol, str(low_raw)),
-            })
-        except Exception:
-            continue
-
-    if len(cleaned) < 4:
-        raise RuntimeError(f"Not enough historical rows for {symbol}")
-
-    latest_day = cleaned[0]
+    latest_day = rows[0]
 
     previous_daily_ranges = [
         format_tick(round_to_tick(r["high"] - r["low"], tick), tick)
-        for r in cleaned[1:4]
+        for r in rows[1:4]
     ]
 
-    latest_five = cleaned[:5]
+    latest_five = rows[:5]
     weekly_high = ""
     weekly_low = ""
     if len(latest_five) == 5:
@@ -186,7 +115,7 @@ def parse_historical(rows: List[Dict[str, str]], contract: Dict[str, str]) -> Di
 
     previous_weekly_ranges = []
     for start in (5, 10, 15):
-        block = cleaned[start:start + 5]
+        block = rows[start:start + 5]
         if len(block) < 5:
             continue
         block_high = max(r["high"] for r in block)
@@ -204,56 +133,44 @@ def parse_historical(rows: List[Dict[str, str]], contract: Dict[str, str]) -> Di
         "previousWeeklyRanges": previous_weekly_ranges,
     }
 
-
-def scrape_contract(page, contract: Dict[str, str]):
-    symbol = contract["symbol"]
-
-    historical_rows = fetch_historical_rows(page, symbol)
-    historical = parse_historical(historical_rows, contract)
-
-    return (
-        {
-            "symbol": symbol,
-            "dailyHigh": historical["dailyHigh"],
-            "dailyLow": historical["dailyLow"],
-        },
-        {
-            "symbol": symbol,
-            "weeklyHigh": historical["weeklyHigh"],
-            "weeklyLow": historical["weeklyLow"],
-        },
-        {
-            "symbol": symbol,
-            "previousDailyRanges": historical["previousDailyRanges"],
-            "previousWeeklyRanges": historical["previousWeeklyRanges"],
-        },
-    )
-
-
-def main() -> None:
+def main():
     daily_feed = []
     weekly_feed = []
     previous_ranges_feed = []
     errors = []
 
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page()
+    for contract in CONTRACTS:
+        symbol = contract["symbol"]
+        commodity = contract["commodity"]
 
-        for contract in CONTRACTS:
-            symbol = contract["symbol"]
-            try:
-                daily_row, weekly_row, previous_row = scrape_contract(page, contract)
-                daily_feed.append(daily_row)
-                weekly_feed.append(weekly_row)
-                previous_ranges_feed.append(previous_row)
-                print(f"OK {symbol}")
-            except Exception as exc:
-                errors.append({"symbol": symbol, "error": str(exc)})
-                print(f"ERR {symbol}: {exc}")
-            time.sleep(1.2)
+        try:
+            rows = fetch_yahoo_history(symbol)
+            parsed = parse_rows(rows, commodity)
 
-        browser.close()
+            daily_feed.append({
+                "symbol": symbol.replace(".CBT", "").replace(".CMX", "").replace(".NYB", "").replace(".NYM", "").replace(".CME", ""),
+                "dailyHigh": parsed["dailyHigh"],
+                "dailyLow": parsed["dailyLow"],
+            })
+
+            weekly_feed.append({
+                "symbol": symbol.replace(".CBT", "").replace(".CMX", "").replace(".NYB", "").replace(".NYM", "").replace(".CME", ""),
+                "weeklyHigh": parsed["weeklyHigh"],
+                "weeklyLow": parsed["weeklyLow"],
+            })
+
+            previous_ranges_feed.append({
+                "symbol": symbol.replace(".CBT", "").replace(".CMX", "").replace(".NYB", "").replace(".NYM", "").replace(".CME", ""),
+                "previousDailyRanges": parsed["previousDailyRanges"],
+                "previousWeeklyRanges": parsed["previousWeeklyRanges"],
+            })
+
+            print("OK", symbol)
+        except Exception as exc:
+            errors.append({"symbol": symbol, "error": str(exc)})
+            print("ERR", symbol, exc)
+
+        time.sleep(0.5)
 
     with open("daily-feed-full.json", "w", encoding="utf-8") as f:
         json.dump(daily_feed, f, indent=2)
@@ -266,7 +183,6 @@ def main() -> None:
 
     with open("errors.json", "w", encoding="utf-8") as f:
         json.dump(errors, f, indent=2)
-
 
 if __name__ == "__main__":
     main()
