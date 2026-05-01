@@ -1,13 +1,13 @@
 [
   {
     "symbol": "CCK26",
-    "weeklyHigh": "3402",
+    "weeklyHigh": "3494",
     "weeklyLow": "3244"
   },
   {
     "symbol": "KCK26",
-    "weeklyHigh": "317.75",
-    "weeklyLow": "299.5"
+    "weeklyHigh": "308.55",
+    "weeklyLow": "295.95"
   },
   {
     "symbol": "HGK26",
@@ -16,13 +16,13 @@
   },
   {
     "symbol": "ZCN26",
-    "weeklyHigh": "480",
-    "weeklyLow": "462"
+    "weeklyHigh": "483.5",
+    "weeklyLow": "462.5"
   },
   {
     "symbol": "ZCZ26",
-    "weeklyHigh": "499.75",
-    "weeklyLow": "482.5"
+    "weeklyHigh": "501.75",
+    "weeklyLow": "483.5"
   },
   {
     "symbol": "CTK26",
@@ -31,13 +31,13 @@
   },
   {
     "symbol": "CLM26",
-    "weeklyHigh": "108.6",
-    "weeklyLow": "92.68"
+    "weeklyHigh": "110.93",
+    "weeklyLow": "94.59"
   },
   {
     "symbol": "GFK26",
-    "weeklyHigh": "374.825",
-    "weeklyLow": "359.225"
+    "weeklyHigh": "378.275",
+    "weeklyLow": "360.9"
   },
   {
     "symbol": "GCJ26",
@@ -47,12 +47,12 @@
   {
     "symbol": "KEN26",
     "weeklyHigh": "718.5",
-    "weeklyLow": "664.25"
+    "weeklyLow": "665.5"
   },
   {
     "symbol": "HEM26",
     "weeklyHigh": "104.45",
-    "weeklyLow": "101.1"
+    "weeklyLow": "100.35"
   },
   {
     "symbol": "LEJ26",
@@ -61,57 +61,57 @@
   },
   {
     "symbol": "NQM26",
-    "weeklyHigh": "27646.5",
-    "weeklyLow": "26992"
+    "weeklyHigh": "27917",
+    "weeklyLow": "27009.5"
   },
   {
     "symbol": "NGM26",
-    "weeklyHigh": "2.808",
-    "weeklyLow": "2.615"
+    "weeklyHigh": "2.821",
+    "weeklyLow": "2.592"
   },
   {
     "symbol": "ZRN26",
-    "weeklyHigh": "1140.5",
-    "weeklyLow": "10.9"
+    "weeklyHigh": "1127",
+    "weeklyLow": "11.1"
   },
   {
     "symbol": "ESM26",
-    "weeklyHigh": "7263.5",
+    "weeklyHigh": "7300.75",
     "weeklyLow": "7131.25"
   },
   {
     "symbol": "SIM26",
-    "weeklyHigh": "76.84",
+    "weeklyHigh": "77.12",
     "weeklyLow": "71.145"
   },
   {
     "symbol": "ZMN26",
     "weeklyHigh": "331.1",
-    "weeklyLow": "316.3"
+    "weeklyLow": "317.9"
   },
   {
     "symbol": "ZLN26",
-    "weeklyHigh": "74.85",
-    "weeklyLow": "70.68"
+    "weeklyHigh": "75.4",
+    "weeklyLow": "70.95"
   },
   {
     "symbol": "ZSN26",
     "weeklyHigh": "1206.25",
-    "weeklyLow": "1171.25"
+    "weeklyLow": "1176.75"
   },
   {
     "symbol": "ZSX26",
-    "weeklyHigh": "1178",
-    "weeklyLow": "1151.5"
+    "weeklyHigh": "1184.5",
+    "weeklyLow": "1154.25"
   },
   {
     "symbol": "DXM26",
     "weeklyHigh": "98.965",
-    "weeklyLow": "97.86"
+    "weeklyLow": "97.57"
   },
   {
     "symbol": "ZWN26",
     "weeklyHigh": "671.5",
-    "weeklyLow": "611"
+    "weeklyLow": "617"
   }
 ]
