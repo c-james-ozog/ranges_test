@@ -1,5 +1,9 @@
 [
   {
+    "symbol": "CTK26.NYB",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
     "symbol": "GCJ26.CMX",
     "error": "HTTP Error 404: Not Found"
   },
