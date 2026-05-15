@@ -7,27 +7,27 @@
   {
     "symbol": "KCK26",
     "weeklyHigh": "300",
-    "weeklyLow": "287"
+    "weeklyLow": "286.65"
   },
   {
     "symbol": "HGK26",
     "weeklyHigh": "6.645",
-    "weeklyLow": "6.0525"
+    "weeklyLow": "6.2315"
   },
   {
     "symbol": "ZCN26",
     "weeklyHigh": "484.5",
-    "weeklyLow": "465.25"
+    "weeklyLow": "455"
   },
   {
     "symbol": "ZCZ26",
     "weeklyHigh": "506.5",
-    "weeklyLow": "487.25"
+    "weeklyLow": "480.25"
   },
   {
     "symbol": "CLM26",
-    "weeklyHigh": "103.67",
-    "weeklyLow": "93.82"
+    "weeklyHigh": "106",
+    "weeklyLow": "96.13"
   },
   {
     "symbol": "GFK26",
@@ -37,7 +37,7 @@
   {
     "symbol": "KEN26",
     "weeklyHigh": "750",
-    "weeklyLow": "664.5"
+    "weeklyLow": "677.25"
   },
   {
     "symbol": "HEM26",
@@ -46,33 +46,33 @@
   },
   {
     "symbol": "NQM26",
-    "weeklyHigh": "29720.5",
-    "weeklyLow": "28541"
+    "weeklyHigh": "29782",
+    "weeklyLow": "28742"
   },
   {
     "symbol": "NGM26",
-    "weeklyHigh": "2.95",
-    "weeklyLow": "2.735"
+    "weeklyHigh": "2.982",
+    "weeklyLow": "2.751"
   },
   {
     "symbol": "ZRN26",
-    "weeklyHigh": "1276.5",
-    "weeklyLow": "12.6"
+    "weeklyHigh": "1277",
+    "weeklyLow": "12.4"
   },
   {
     "symbol": "ESM26",
-    "weeklyHigh": "7527",
-    "weeklyLow": "7336.25"
+    "weeklyHigh": "7540",
+    "weeklyLow": "7363.25"
   },
   {
     "symbol": "SIM26",
     "weeklyHigh": "89.7",
-    "weeklyLow": "78.705"
+    "weeklyLow": "75.885"
   },
   {
     "symbol": "ZMN26",
-    "weeklyHigh": "338.7",
-    "weeklyLow": "317"
+    "weeklyHigh": "342.5",
+    "weeklyLow": "318.5"
   },
   {
     "symbol": "ZLN26",
@@ -82,21 +82,21 @@
   {
     "symbol": "ZSN26",
     "weeklyHigh": "1235",
-    "weeklyLow": "1181.5"
+    "weeklyLow": "1172.25"
   },
   {
     "symbol": "ZSX26",
     "weeklyHigh": "1214",
-    "weeklyLow": "1172.5"
+    "weeklyLow": "1167"
   },
   {
     "symbol": "DXM26",
-    "weeklyHigh": "98.805",
-    "weeklyLow": "97.69"
+    "weeklyHigh": "99.245",
+    "weeklyLow": "97.72"
   },
   {
     "symbol": "ZWN26",
     "weeklyHigh": "688.25",
-    "weeklyLow": "608.5"
+    "weeklyLow": "620"
   }
 ]
