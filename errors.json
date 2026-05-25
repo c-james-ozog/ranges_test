@@ -12,6 +12,14 @@
     "error": "HTTP Error 404: Not Found"
   },
   {
+    "symbol": "CLM26.NYM",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "symbol": "GFK26.CME",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
     "symbol": "GCJ26.CMX",
     "error": "HTTP Error 404: Not Found"
   },
