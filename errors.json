@@ -8,6 +8,10 @@
     "error": "HTTP Error 404: Not Found"
   },
   {
+    "symbol": "HGK26.CMX",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
     "symbol": "CTK26.NYB",
     "error": "HTTP Error 404: Not Found"
   },
@@ -25,6 +29,10 @@
   },
   {
     "symbol": "LEJ26.CME",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "symbol": "NGM26.NYM",
     "error": "HTTP Error 404: Not Found"
   }
 ]

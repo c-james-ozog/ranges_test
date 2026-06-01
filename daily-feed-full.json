@@ -1,82 +1,72 @@
 [
   {
-    "symbol": "HGK26",
-    "dailyHigh": "6.4175",
-    "dailyLow": "6.305"
-  },
-  {
     "symbol": "ZCN26",
-    "dailyHigh": "459",
-    "dailyLow": "445"
+    "dailyHigh": "449.25",
+    "dailyLow": "440"
   },
   {
     "symbol": "ZCZ26",
-    "dailyHigh": "485",
-    "dailyLow": "473.5"
+    "dailyHigh": "477.25",
+    "dailyLow": "468.75"
   },
   {
     "symbol": "KEN26",
-    "dailyHigh": "669.5",
-    "dailyLow": "647.5"
+    "dailyHigh": "661.5",
+    "dailyLow": "644"
   },
   {
     "symbol": "HEM26",
-    "dailyHigh": "96.725",
-    "dailyLow": "95.675"
+    "dailyHigh": "96.375",
+    "dailyLow": "94.875"
   },
   {
     "symbol": "NQM26",
-    "dailyHigh": "30536",
-    "dailyLow": "30216.5"
-  },
-  {
-    "symbol": "NGM26",
-    "dailyHigh": "3.055",
-    "dailyLow": "2.857"
+    "dailyHigh": "30547.25",
+    "dailyLow": "30431"
   },
   {
     "symbol": "ZRN26",
-    "dailyHigh": "13",
+    "dailyHigh": "12.5",
     "dailyLow": "12.5"
   },
   {
     "symbol": "ESM26",
-    "dailyHigh": "7611.5",
-    "dailyLow": "7572.75"
+    "dailyHigh": "7612",
+    "dailyLow": "7591"
   },
   {
     "symbol": "SIM26",
-    "dailyHigh": "75.52",
-    "dailyLow": "75.115"
+    "dailyHigh": "75.645",
+    "dailyLow": "74.375"
   },
   {
     "symbol": "ZMN26",
-    "dailyHigh": "335.1",
-    "dailyLow": "329.2"
+    "dailyHigh": "331.8",
+    "dailyLow": "325.6"
   },
   {
     "symbol": "ZLN26",
-    "dailyHigh": "78.36",
-    "dailyLow": "76.1"
+    "dailyHigh": "79.69",
+    "dailyLow": "77.34"
   },
   {
     "symbol": "ZSN26",
-    "dailyHigh": "1200.75",
-    "dailyLow": "1182.75"
+    "dailyHigh": "1194.5",
+    "dailyLow": "1177.75"
   },
   {
     "symbol": "ZSX26",
-    "dailyHigh": "1199",
-    "dailyLow": "1186"
+    "dailyHigh": "1197.25",
+    "dailyLow": "1184.75"
   },
   {
     "symbol": "DXM26",
-    "dailyHigh": "99.145",
-    "dailyLow": "98.695"
+    "dailyHigh": "99.365",
+    "dailyLow": "98.87"
   },
   {
     "symbol": "ZWN26",
-    "dailyHigh": "628",
-    "dailyLow": "609.25"
+    "dailyHigh": "619.5",
+    "dailyLow": "606.5"
   }
 ]
