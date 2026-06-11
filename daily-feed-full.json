@@ -1,72 +1,72 @@
 [
   {
     "symbol": "ZCN26",
-    "dailyHigh": "425.75",
-    "dailyLow": "418.25"
+    "dailyHigh": "420",
+    "dailyLow": "410.5"
   },
   {
     "symbol": "ZCZ26",
-    "dailyHigh": "451.5",
-    "dailyLow": "444.25"
+    "dailyHigh": "448",
+    "dailyLow": "437.5"
   },
   {
     "symbol": "KEN26",
-    "dailyHigh": "645",
-    "dailyLow": "629"
+    "dailyHigh": "643.25",
+    "dailyLow": "623.25"
   },
   {
     "symbol": "HEM26",
-    "dailyHigh": "93.475",
-    "dailyLow": "93.05"
+    "dailyHigh": "92.975",
+    "dailyLow": "92.75"
   },
   {
     "symbol": "NQM26",
-    "dailyHigh": "28470",
-    "dailyLow": "28265.75"
+    "dailyHigh": "29586.5",
+    "dailyLow": "29443"
   },
   {
     "symbol": "ZRN26",
     "dailyHigh": "12.5",
-    "dailyLow": "12.5"
+    "dailyLow": "12"
   },
   {
     "symbol": "ESM26",
-    "dailyHigh": "7266.75",
-    "dailyLow": "7232.25"
+    "dailyHigh": "7416.25",
+    "dailyLow": "7396.75"
   },
   {
     "symbol": "SIM26",
-    "dailyHigh": "68.815",
-    "dailyLow": "65"
+    "dailyHigh": "63.985",
+    "dailyLow": "63.955"
   },
   {
     "symbol": "ZMN26",
-    "dailyHigh": "304.4",
-    "dailyLow": "301.3"
+    "dailyHigh": "304.7",
+    "dailyLow": "301.4"
   },
   {
     "symbol": "ZLN26",
-    "dailyHigh": "75.79",
-    "dailyLow": "74.54"
+    "dailyHigh": "76.03",
+    "dailyLow": "73.92"
   },
   {
     "symbol": "ZSN26",
-    "dailyHigh": "1129.75",
-    "dailyLow": "1113"
+    "dailyHigh": "1125",
+    "dailyLow": "1108.25"
   },
   {
     "symbol": "ZSX26",
-    "dailyHigh": "1143.5",
-    "dailyLow": "1130.75"
+    "dailyHigh": "1142.5",
+    "dailyLow": "1126.5"
   },
   {
     "symbol": "DXM26",
-    "dailyHigh": "100.045",
-    "dailyLow": "99.7"
+    "dailyHigh": "100.315",
+    "dailyLow": "99.565"
   },
   {
     "symbol": "ZWN26",
-    "dailyHigh": "600.25",
-    "dailyLow": "583.5"
+    "dailyHigh": "593.75",
+    "dailyLow": "582.25"
   }
 ]
