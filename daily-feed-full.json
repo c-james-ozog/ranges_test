@@ -15,11 +15,6 @@
     "dailyLow": "639.75"
   },
   {
-    "symbol": "HEM26",
-    "dailyHigh": "92.7",
-    "dailyLow": "92.3"
-  },
-  {
     "symbol": "NQM26",
     "dailyHigh": "30285.75",
     "dailyLow": "29758.5"
@@ -36,8 +31,8 @@
   },
   {
     "symbol": "SIM26",
-    "dailyHigh": "70.95",
-    "dailyLow": "68.76"
+    "dailyHigh": "66.255",
+    "dailyLow": "66.255"
   },
   {
     "symbol": "ZMN26",
