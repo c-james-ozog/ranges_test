@@ -36,7 +36,15 @@
     "error": "HTTP Error 404: Not Found"
   },
   {
+    "symbol": "NQM26.CME",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
     "symbol": "NGM26.NYM",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "symbol": "ESM26.CME",
     "error": "HTTP Error 404: Not Found"
   }
 ]
