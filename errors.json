@@ -46,5 +46,9 @@
   {
     "symbol": "ESM26.CME",
     "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "symbol": "SIM26.CMX",
+    "error": "HTTP Error 404: Not Found"
   }
 ]
