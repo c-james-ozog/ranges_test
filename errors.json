@@ -50,5 +50,9 @@
   {
     "symbol": "SIM26.CMX",
     "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "symbol": "DXM26.NYB",
+    "error": "HTTP Error 404: Not Found"
   }
 ]
