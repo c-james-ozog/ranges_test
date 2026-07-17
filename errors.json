@@ -12,6 +12,10 @@
     "error": "HTTP Error 404: Not Found"
   },
   {
+    "symbol": "ZCN26.CBT",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
     "symbol": "CTK26.NYB",
     "error": "HTTP Error 404: Not Found"
   },
@@ -25,6 +29,10 @@
   },
   {
     "symbol": "GCJ26.CMX",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "symbol": "KEN26.CBT",
     "error": "HTTP Error 404: Not Found"
   },
   {
@@ -44,11 +52,31 @@
     "error": "HTTP Error 404: Not Found"
   },
   {
+    "symbol": "ZRN26.CBT",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
     "symbol": "ESM26.CME",
     "error": "HTTP Error 404: Not Found"
   },
   {
     "symbol": "SIM26.CMX",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "symbol": "ZMN26.CBT",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "symbol": "ZLN26.CBT",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "symbol": "ZSN26.CBT",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "symbol": "ZWN26.CBT",
     "error": "HTTP Error 404: Not Found"
   }
 ]

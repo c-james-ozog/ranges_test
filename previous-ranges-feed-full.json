@@ -1,106 +1,28 @@
 [
   {
-    "symbol": "ZCN26",
-    "previousDailyRanges": [
-      "10",
-      "10.25",
-      "7.25"
-    ],
-    "previousWeeklyRanges": [
-      "44",
-      "19",
-      "15.75"
-    ]
-  },
-  {
     "symbol": "ZCZ26",
     "previousDailyRanges": [
+      "11.25",
       "12.25",
-      "5.5",
-      "7.25"
+      "5.5"
     ],
     "previousWeeklyRanges": [
-      "25.25",
+      "21.25",
       "20.5",
-      "16"
-    ]
-  },
-  {
-    "symbol": "KEN26",
-    "previousDailyRanges": [
-      "12.25",
-      "25.25",
-      "13.5"
-    ],
-    "previousWeeklyRanges": [
-      "42.75",
-      "39.5",
-      "35.75"
-    ]
-  },
-  {
-    "symbol": "ZRN26",
-    "previousDailyRanges": [
-      "0",
-      "0",
-      "0"
-    ],
-    "previousWeeklyRanges": [
-      "0.5",
-      "1",
-      "0.5"
-    ]
-  },
-  {
-    "symbol": "ZMN26",
-    "previousDailyRanges": [
-      "26.6",
-      "2.7",
-      "5.6"
-    ],
-    "previousWeeklyRanges": [
-      "16.6",
-      "8.8",
-      "9.7"
-    ]
-  },
-  {
-    "symbol": "ZLN26",
-    "previousDailyRanges": [
-      "0.85",
-      "0.66",
-      "0.75"
-    ],
-    "previousWeeklyRanges": [
-      "3.91",
-      "2.96",
-      "6.69"
-    ]
-  },
-  {
-    "symbol": "ZSN26",
-    "previousDailyRanges": [
-      "6.5",
-      "13",
-      "17.25"
-    ],
-    "previousWeeklyRanges": [
-      "101.5",
-      "26.75",
-      "38"
+      "18"
     ]
   },
   {
     "symbol": "ZSX26",
     "previousDailyRanges": [
+      "13",
       "18.5",
-      "8.5",
-      "16"
+      "8.5"
     ],
     "previousWeeklyRanges": [
-      "57.75",
+      "51",
       "36.5",
-      "25"
+      "30.25"
     ]
   },
   {
@@ -114,19 +36,6 @@
       "1.195",
       "0.805",
       "0.705"
-    ]
-  },
-  {
-    "symbol": "ZWN26",
-    "previousDailyRanges": [
-      "7.5",
-      "4.75",
-      "5"
-    ],
-    "previousWeeklyRanges": [
-      "41.25",
-      "33.75",
-      "47.25"
     ]
   }
 ]
