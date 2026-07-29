@@ -2,11 +2,16 @@
   {
     "symbol": "ZCZ26",
     "weeklyHigh": "492",
-    "weeklyLow": "471.25"
+    "weeklyLow": "470.75"
   },
   {
     "symbol": "ZSX26",
     "weeklyHigh": "1256.5",
-    "weeklyLow": "1206.25"
+    "weeklyLow": "1190"
+  },
+  {
+    "symbol": "DXM26",
+    "weeklyHigh": "100.315",
+    "weeklyLow": "99.445"
   }
 ]
