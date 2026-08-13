@@ -1,17 +1,12 @@
 [
   {
     "symbol": "ZCZ26",
-    "dailyHigh": "481.5",
-    "dailyLow": "459.5"
+    "dailyHigh": "481",
+    "dailyLow": "470.5"
   },
   {
     "symbol": "ZSX26",
-    "dailyHigh": "1198.75",
-    "dailyLow": "1167.5"
-  },
-  {
-    "symbol": "DXM26",
-    "dailyHigh": "99.6",
-    "dailyLow": "99.445"
+    "dailyHigh": "1188",
+    "dailyLow": "1178.75"
   }
 ]

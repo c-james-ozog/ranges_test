@@ -76,6 +76,10 @@
     "error": "HTTP Error 404: Not Found"
   },
   {
+    "symbol": "DXM26.NYB",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
     "symbol": "ZWN26.CBT",
     "error": "HTTP Error 404: Not Found"
   }
