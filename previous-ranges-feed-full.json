@@ -2,27 +2,38 @@
   {
     "symbol": "ZCZ26",
     "previousDailyRanges": [
-      "4.75",
+      "4",
       "10.5",
-      "9.5"
+      "10.5"
     ],
     "previousWeeklyRanges": [
-      "38.25",
-      "33.5",
-      "10"
+      "41.5",
+      "28",
+      "24.25"
     ]
   },
   {
     "symbol": "ZSX26",
     "previousDailyRanges": [
-      "11.5",
-      "20.75",
-      "21.25"
+      "7.5",
+      "17.25",
+      "20.75"
     ],
     "previousWeeklyRanges": [
-      "30.5",
-      "64.25",
-      "19.75"
+      "53.75",
+      "60.75",
+      "33.5"
+    ]
+  },
+  {
+    "symbol": "DXM26",
+    "previousDailyRanges": [
+      "0.255",
+      "0.75",
+      "0.345"
+    ],
+    "previousWeeklyRanges": [
+      "1.195"
     ]
   }
 ]
