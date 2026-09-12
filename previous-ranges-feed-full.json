@@ -2,7 +2,7 @@
   {
     "symbol": "ZCZ26",
     "previousDailyRanges": [
-      "1.5",
+      "8",
       "8.25",
       "11.5"
     ],
@@ -15,7 +15,7 @@
   {
     "symbol": "ZSX26",
     "previousDailyRanges": [
-      "2.25",
+      "28.5",
       "15.25",
       "17.25"
     ],
@@ -24,14 +24,5 @@
       "55.75",
       "62"
     ]
-  },
-  {
-    "symbol": "DXM26",
-    "previousDailyRanges": [
-      "0.255",
-      "0.75",
-      "0.345"
-    ],
-    "previousWeeklyRanges": []
   }
 ]
